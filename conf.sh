@@ -6,9 +6,6 @@ if [ "$EUID" -ne 0 ]
 fi
 
 chmod 755 Ghost_networking/ghost.sh
-cp Ghost_networking/ghost.sh /usr/bin/robo
+cp Ghost_networking/ghost.sh /usr/bin/ghost
 rm -rf Ghost_networking
-echo "Basta digitar "
-echo
-echo "Assinado por Gabriel"
-echo "Também conhecido como Caostic"
+echo "Basta digitar 'ghost' para chamar o comando"
