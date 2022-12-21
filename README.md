@@ -18,6 +18,7 @@ Caso você erre o comando, adicionei uma funcionalidade que mostra o MODO DE USO
 ![image](https://user-images.githubusercontent.com/92878748/209012299-acbc3d3b-a0d7-4798-a18c-76d58a193a8b.png)
 
 # Configurando o script:
+Após baixar os arquivos no SO, basta usar esse comando no terminal:
 ```
 chmod 755 Ghost_networking/conf.sh && sudo Ghost_networking/conf.sh
 ```
