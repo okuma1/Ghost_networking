@@ -1,7 +1,9 @@
 # Ghost_networking
 
 Funcionalidades do script:
-- Scan de portas nos hosts;
+- Scan de portas nos hosts
+![image](https://user-images.githubusercontent.com/92878748/209012811-3cb2d55c-4118-4453-919c-cb15918d31e7.png)
+
 - Scan de subdominios dos Hosts(web);
 - Analise de tráfego de rede.
 
