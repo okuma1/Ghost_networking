@@ -1,5 +1,7 @@
 # Ghost_networking
 
+- Video: https://www.youtube.com/watch?v=_5pKL4FgXBQ
+
 Funcionalidades do script:
 - Scan de portas nos hosts
 
