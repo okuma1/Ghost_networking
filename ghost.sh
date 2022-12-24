@@ -22,6 +22,7 @@ echo -e "\e[40;32m<-s> \e[m""Escanear Subdominios de um Host"
 echo ""
 echo -e "\e[40;32m<-a> \e[m""Analisa e infiltra IP Trafego de rede(.pcap)"
 echo ""
+echo -e "\e[40;32m<-e> \e[m""Enumeracao de Servicos"
 echo -e "\e[40;35mRealizar o comando navamente!\e[m"
 }
 
@@ -109,6 +110,61 @@ elif [ "$1" == "-a" ]
 
 
 			fi	
+
+		fi
+
+elif [ "$1" == "-e" ]
+	then
+		if [ "$2" == "" ]
+		then
+			menu_help
+		else
+			echo -e "\e[40;33;01m[ + ] SERVICOS\e[m"
+			echo ""
+			echo "Escolha o servico que queira enumerar!"
+			echo ""
+			echo "[ 21 ] FTP"
+			echo ""
+			echo "[ 80 ] WEB "
+			echo ""
+			read -p "> " resp
+			echo ""
+			if [ "$resp" == "21" ]
+			then
+				ftp $2	
+			elif [ "$resp" == "80" ]
+			then
+				whatweb $2
+				i="s"
+				while [ "$i" == "s" ]
+				do
+					echo ""
+					echo "Alem da enumeracao, temos essas funcionalidades para o seu pentest: "
+					echo ""
+					echo "[ 0 ] Finalizar sessao"
+					echo ""
+					echo "[ 1 ] BruteForce nos diretorios"
+					echo ""
+					echo "[ 2 ] Reverse Shell"
+					echo ""
+					echo "[ 3 ] SQL Injection"
+					echo ""
+					read -p "> " oi
+					if [ "$oi" == "0" ]
+					then
+						break
+					elif [ "$oi" == "1" ]
+					then
+						dirsearch -u $2
+					elif [ "$oi" == "2" ]
+					then
+						echo "Em breve....."
+					fi
+
+					read -p "Deseja realizar outra funcao?(s/n)?:  " i
+				
+				done
+			fi
 
 		fi
 fi
